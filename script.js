@@ -72,6 +72,7 @@ export function sortByLastName() {
 	const sortedByLastName = people.sort((a, b) => {
     const [aLastName] = a.split(', ').map(name=>name.trim());
     const [bLastName] = b.split(', ').map(name=>name.trim());
+		console.log(`Comparing: ${aLastName} and ${bLastName}`);
     return aLastName.localeCompare(bLastName);
   });
   return sortedByLastName;
